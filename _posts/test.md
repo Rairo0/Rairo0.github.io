@@ -3,6 +3,7 @@ title: "RE4B: CH1.1 – Introduction"
 date: 2025-01-02
 categories: [Reverse, Books]
 tags: [Reverse, RE4B, Basics]
+image: /assets/img/ch1/_.jpeg
 ---
 
 ## مقدمة
