@@ -13,12 +13,13 @@ tags: [Reverse, RE4B, Basics]
 int add(int a, int b) {
   return a + b;
 }
-
+```
+### asm Code
 ```asm
 mov eax, edi
 add eax, esi
 ret
-
+```
 
 وبعدين:
 ```bash
