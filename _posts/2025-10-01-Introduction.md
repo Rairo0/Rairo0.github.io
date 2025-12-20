@@ -92,4 +92,6 @@ https://godbolt.org/
 <p dir="rtl">
 وكل حاجة جديدة هتنزل علي Discord
 </p>
+<span class="red hl">معلومة مهمة</span>
+<span class="green hl">معلومة مش مهمة</span>
 ![Gonoon El3azama](/assets/img/posts/ch1/Tafa.jpeg)
