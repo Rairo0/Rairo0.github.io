@@ -1,0 +1,24 @@
+/* RTL for Arabic content in posts/pages */
+.post-content,
+.page-content {
+  direction: rtl;
+  unicode-bidi: plaintext;
+  text-align: right;
+}
+
+/* Keep code blocks LTR */
+.post-content pre,
+.post-content code,
+.page-content pre,
+.page-content code {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: left;
+}
+
+/* Inline English snippets helper */
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
