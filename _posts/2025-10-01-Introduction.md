@@ -3,6 +3,7 @@ title: "RE4B:Introduction"
 date: 2025-10-01
 categories: [Reverse, Books]
 tags: [Reverse, RE4B, Basics]
+image: /assets/img/posts/ch1/kadar.jpeg
 ---
 ### Introduction
 
@@ -91,3 +92,4 @@ https://godbolt.org/
 <p dir="rtl">
 وكل حاجة جديدة هتنزل علي Discord
 </p>
+![Gonoon El3azama](/assets/img/posts/ch1/Tafa.jpeg)
