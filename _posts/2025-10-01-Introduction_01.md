@@ -7,7 +7,7 @@ image: /assets/img/posts/ch1/optimized.jpeg
 ---
 
 ### Source code can be compiled by different compilers with various optimization levels.
-### <p dir="rtl"> الفكرة العامة </p>
+### General idea
 <p dir="rtl">نفس كود الC</p>
 <p dir="rtl">ممكن يطلع Assembly مختلف</p>
 <p dir="rtl">حسب:</p>
@@ -15,7 +15,7 @@ image: /assets/img/posts/ch1/optimized.jpeg
 <p dir="rtl">2. مستوي الoptimization</p>
 <p dir="rtl">3. هل فيه debug info ولا لا</p>
 
-### <p dir="rtl"> يعني ايه optimizayion </p>
+### What does the optimizayion mean ?
 <p dir="rtl">الـcompiler مش بس يترجم دا كمان</p>
 <p dir="rtl">-ممكن يعدل الكود</p>
 <p dir="rtl">-يشيل حاجات</p>
@@ -24,7 +24,7 @@ image: /assets/img/posts/ch1/optimized.jpeg
 <p dir="rtl">-يخليه أسرع</p>
 <p dir="rtl">-أو أقل حجما</p>
 		
-### مستوايات الـoptimization
+### optimization level
 
 <p dir="rtl">غالبا فيه 3 مستويات مشهورة</p>
 <p dir="rtl">المستوي الأول optimization = 0</p>
@@ -34,7 +34,7 @@ image: /assets/img/posts/ch1/optimized.jpeg
 <p dir="rtl">والنوع دا اللي بيكون مفيد في:</p>
 <p dir="rtl">* التعليم والـDebugging والـReverse *</p>
 
-### الأنواع التانية من الـ Optimization مثلا (01/ 02/ 03 )
+### Other types of Optimization: (01/ 02/ 03 )
 <p dir="rtl">الـCompiler بيحاول:</p>
 <p dir="rtl">-يسرع البرنامج</p>
 <p dir="rtl">-يشيل أي كود ملوش لازمة</p>
@@ -48,7 +48,7 @@ image: /assets/img/posts/ch1/optimized.jpeg
 int x = 5;
 ```
 <p dir="rtl">لو X مش مستخدم هيتحذف بالكامل من النسخة الoptimized</p>
-### سرعة الـ Compiler
+### Compiler speed
 <p dir="rtl">1.بدون optimization:</p>
 <p dir="rtl">-الترجمة أسرع</p>
 <p dir="rtl">2.مع optimization:</p>
@@ -56,13 +56,13 @@ int x = 5;
 <p dir="rtl">-بس البرنامج النهائي أسرع</p>
 
 
-### الـOptimization للسرعة ولا للحجم؟
+### Optimization for speed or size?
 <p dir="rtl">الـ compiler ممكن يشتغل على:</p>
 
 <p dir="rtl">🔸 سرعة التنفيذ (performance)</p>
 <p dir="rtl">🔸 صغر حجم الملف</p>
 
-### يعني ايه Debug Code
+### What does the Debug Code mean?
 <p dir="rtl">لو فعلت debug mode:</p>
 <p dir="rtl">الملف الناتج يحتوي:</p>
 
@@ -75,7 +75,7 @@ int x = 5;
 <p dir="rtl">الـ debugging سهل</p>
 <p dir="rtl">الـ reversing أسهل كمان</p>
 
-### في النسخة الOptimized 
+### In the Optimized version
 <p dir="rtl">مش هتلاقي ربط واضح بين كود الـC والـAssembly</p>
 <p dir="rtl">سطور الـC ممكن تندمج تختفي</p>
 <p dir="rtl">ترتيب الكود بيتغير</p>
