@@ -7,7 +7,7 @@ image: /assets/img/posts/ch1/optimized.jpeg
 ---
 
 ### Source code can be compiled by different compilers with various optimization levels.
-### الفكرة العامة:
+### <p dir="rtl"> الفكرة العامة </p>
 <p dir="rtl">نفس كود الC</p>
 <p dir="rtl">ممكن يطلع Assembly مختلف</p>
 <p dir="rtl">حسب:</p>
@@ -15,7 +15,7 @@ image: /assets/img/posts/ch1/optimized.jpeg
 <p dir="rtl">2. مستوي الoptimization</p>
 <p dir="rtl">3. هل فيه debug info ولا لا</p>
 
-### يعني ايه optimizayion
+### <p dir="rtl"> يعني ايه optimizayion </p>
 <p dir="rtl">الـcompiler مش بس يترجم دا كمان</p>
 <p dir="rtl">-ممكن يعدل الكود</p>
 <p dir="rtl">-يشيل حاجات</p>
