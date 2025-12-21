@@ -63,4 +63,5 @@ image: /assets/img/posts/ch1/optimized.jpeg
 ## Example C Code
 ```c
 int x = 5;
+```
 ![Gald](/assets/img/posts/ch1/gald.jpeg)
