@@ -1,29 +1,42 @@
-/* RTL for Arabic content in posts/pages */
+/* RTL only for text content */
 .post-content,
 .page-content {
   direction: rtl;
-  unicode-bidi: plaintext;
   text-align: right;
+}
+
+/* Fix lists (numbers/bullets) */
+.post-content ul,
+.post-content ol,
+.page-content ul,
+.page-content ol {
+  direction: rtl;
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+.post-content li,
+.page-content li {
+  direction: rtl;
 }
 
 /* Keep code blocks LTR */
 .post-content pre,
 .post-content code,
+.post-content pre *,
+.post-content code *,
 .page-content pre,
-.page-content code {
+.page-content code,
+.page-content pre *,
+.page-content code * {
   direction: ltr;
   unicode-bidi: isolate;
   text-align: left;
 }
 
-/* Inline English snippets helper */
+/* Inline English helper */
 .ltr {
   direction: ltr;
   unicode-bidi: isolate;
   display: inline-block;
 }
-
-.red { color: #ff5c5c; }
-.green { color: #7CFC90; }
-.blue { color: #53a7ff; }
-.hl { background: #222; padding: 2px 6px; border-radius: 6px; }
