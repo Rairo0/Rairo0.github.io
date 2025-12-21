@@ -1,5 +1,5 @@
 ---
-title: "RE4B:Introduction"
+title: "RE4B:Introduction_00"
 date: 2025-10-01
 categories: [Reverse, Books]
 tags: [Reverse, RE4B, Basics]
