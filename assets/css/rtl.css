@@ -1,16 +1,37 @@
-/* RTL only for text content */
+/* RTL for article text only */
 .post-content,
 .page-content {
   direction: rtl;
   text-align: right;
 }
 
-/* Fix lists (numbers/bullets) */
+/* Paragraphs & headings */
+.post-content p,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.page-content p,
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6 {
+  direction: rtl;
+  unicode-bidi: embed;
+  text-align: right;
+}
+
+/* Lists */
 .post-content ul,
 .post-content ol,
 .page-content ul,
 .page-content ol {
   direction: rtl;
+  unicode-bidi: embed;
   padding-right: 1.5rem;
   padding-left: 0;
 }
@@ -18,6 +39,7 @@
 .post-content li,
 .page-content li {
   direction: rtl;
+  unicode-bidi: embed;
 }
 
 /* Keep code blocks LTR */
