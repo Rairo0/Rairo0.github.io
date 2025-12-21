@@ -5,7 +5,7 @@ categories: [Reverse, Books]
 tags: [Reverse, RE4B, Basics]
 image: /assets/img/posts/ch1/kadar.jpeg
 ---
-### Introduction
+### Introduction_00
 
 <div dir="rtl">
 هنتكلم عن شوية حاجات أساسية في المجمل بالمختصر المفيد
