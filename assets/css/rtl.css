@@ -1,64 +1,99 @@
-/* RTL for article text only */
-.post-content,
-.page-content {
-  direction: rtl;
-  text-align: right;
+/*
+  assets/css/rtl.css
+
+  Purpose: enable right-to-left layout for Arabic text while preserving
+  code blocks and inline code as left-to-right. Do NOT use
+  `unicode-bidi: plaintext` (it breaks lists and spacing in Chirpy).
+
+  Usage (recommended): include this file conditionally when your page
+  or site is Arabic. Example (in a layout or include):
+
+    {% if page.lang == 'ar' or site.lang == 'ar' %}
+      <link rel="stylesheet" href="{{ '/assets/css/rtl.css' | relative_url }}">
+    {% endif %}
+
+  Also ensure your HTML tag or root has `dir="rtl"` when serving Arabic
+  pages, e.g. <html lang="ar" dir="rtl">. If you prefer to toggle via a
+  class, add `class="rtl"` to the <body> element and it will be picked up.
+
+  Important notes:
+  - Keep code blocks LTR so asm/C/bash snippets don't get reversed.
+  - Do not change image paths here; ensure images referenced in `_config.yml`
+    exist (missing assets will make htmlproofer fail on build).
+*/
+
+/* Root selectors: support three ways sites may indicate RTL
+   - html[lang="ar"] or html[dir="rtl"]
+   - body.rtl (class-based)
+*/
+html[lang="ar"], html[dir="rtl"], body.rtl {
+  direction: rtl; /* logical direction only */
 }
 
-/* Paragraphs & headings */
-.post-content p,
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6,
-.page-content p,
-.page-content h1,
-.page-content h2,
-.page-content h3,
-.page-content h4,
-.page-content h5,
-.page-content h6 {
-  direction: rtl;
-  unicode-bidi: embed;
-  text-align: right;
+/* Use logical text alignment so inline English keeps natural placement. */
+html[lang="ar"], html[dir="rtl"], body.rtl {
+  text-align: start; /* 'start' is right in RTL */
 }
 
-/* Lists */
-.post-content ul,
-.post-content ol,
-.page-content ul,
-.page-content ol {
-  direction: rtl;
-  unicode-bidi: embed;
-  padding-right: 1.5rem;
-  padding-left: 0;
+/* Keep layout containers inheriting direction (avoid forcing text-align on every block) */
+main, header, footer, .container, .site, .post, article {
+  direction: inherit;
 }
 
-.post-content li,
-.page-content li {
-  direction: rtl;
-  unicode-bidi: embed;
+/* Mirror floats and utility classes used by many themes */
+/* These rules help place floated images/icons on the correct side in RTL. */
+img[align="left"], .float-left {
+  float: right !important;
+}
+img[align="right"], .float-right {
+  float: left !important;
 }
 
-/* Keep code blocks LTR */
-.post-content pre,
-.post-content code,
-.post-content pre *,
-.post-content code *,
-.page-content pre,
-.page-content code,
-.page-content pre *,
-.page-content code * {
+/* Mirror common margin/padding logicals where appropriate */
+.pull-left, .align-left { margin-inline-start: 0; margin-inline-end: 0; }
+
+/* Lists: keep list markers and spacing stable using logical properties */
+ul, ol {
+  direction: rtl; /* ensure bullet ordering is correct for RTL */
+  list-style-position: outside;
+  padding-inline-start: 1.25rem; /* logical start (right side in RTL) */
+}
+
+/* Tables: many tables are LTR for readability (numbers, code, columns) */
+/* Set table contents LTR but keep table flow in RTL pages */
+table, thead, tbody, tr, td, th {
+  direction: ltr;
+}
+
+/* KEEP CODE BLOCKS AND INLINE CODE LTR
+   - We avoid `unicode-bidi: plaintext` because it breaks layout in Chirpy.
+   - Use `unicode-bidi: isolate` (safe) + `direction: ltr` to keep code content
+     displayed in normal left-to-right order.
+*/
+pre, code, kbd, samp, .highlight, .language-bash, .language-c, .language-asm, .rouge-code {
+  direction: ltr !important;
+  unicode-bidi: isolate; /* safe isolation for mixed direction content */
+  text-align: left !important;
+  /* preserve whitespace/format in blocks */
+}
+
+/* Inline code inside paragraphs/lists should also stay LTR */
+p code, li code, a code, span.code {
   direction: ltr;
   unicode-bidi: isolate;
-  text-align: left;
 }
 
-/* Inline English helper */
-.ltr {
+/* Force URL-like items (emails, urls, commit hashes) to be LTR where desired */
+.ltr-force, a.url, .commit-hash {
   direction: ltr;
   unicode-bidi: isolate;
-  display: inline-block;
 }
+
+/* Breadcrumbs/navigation: let them inherit RTL but avoid forced center alignment */
+.breadcrumb, .nav, .toc {
+  direction: rtl;
+}
+
+/* Small helper: if you need to mark a single element as LTR in templates, add class="ltr-force" */
+
+/* End of rtl.css */
