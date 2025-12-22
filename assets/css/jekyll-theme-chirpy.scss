@@ -267,8 +267,57 @@ html[data-mode="dark"] {
   --rc-link-hover: #93c5fd;
 }
 
-/* Arabic-first reading mode */
+/* =========================================================
+   Arabic-first layout for Chirpy posts
+   ========================================================= */
+
+/* خلي المقال كله RTL */
 .post-content {
   direction: rtl;
-  text-align: start; /* ذكي: يشتغل RTL و LTR */
+  text-align: start;
+}
+
+/* العناوين */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  direction: rtl;
+  text-align: start;
+}
+
+/* الفقرات */
+.post-content p {
+  direction: rtl;
+  text-align: start;
+}
+
+/* القوائم (مهم جدًا) */
+.post-content ul,
+.post-content ol {
+  direction: rtl;
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+/* عناصر القوائم */
+.post-content li {
+  direction: rtl;
+  text-align: start;
+}
+
+/* الأرقام تبقى على اليمين */
+.post-content ol {
+  list-style-position: inside;
+}
+
+/* الكود والإنجليزي يفضلوا LTR */
+.post-content code,
+.post-content pre,
+.post-content .en,
+.post-content .tech {
+  direction: ltr;
+  unicode-bidi: isolate;
 }
