@@ -76,4 +76,4 @@ In the Optimized version
 وصلنا للخلاصة
 <div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(96,165,250,.22); background:rgba(96,165,250,.07); line-height:1.9; color:#E5E7EB;"> في الكتاب بنستخدم <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">compilers</span> قديمة علشان:<br> - تطلع <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">asm code</span> أبسط<br> - تقلل التشويش<br> - وتسهّل الشرح<br><br> وبكده يبقى فاضل شوية نظري وندخل على العملي. </div>
 
-<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(148,163,184,.18); background:rgba(148,163,184,.05); line-height:1.9; color:#E5E7EB;"> كل جديد هينزل على Discord </div> ```
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(148,163,184,.18); background:rgba(148,163,184,.05); line-height:1.9; color:#E5E7EB;"> كل جديد هينزل على Discord </div>
