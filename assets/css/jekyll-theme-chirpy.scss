@@ -1,0 +1,268 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* ===================================================================
+   Reader Comfort Pack for Chirpy
+   - هدف الملف: تحسين المقروئية، التباين، التباعد، وتنسيق العربي/الإنجليزي
+   - الاستخدام: ألحق هذا القسم في آخر assets/css/jekyll-theme-chirpy.scss
+   =================================================================== */
+
+/* -------------------------------------------------------------------
+   1) متغيرات ألوان/مسافات عامة (قابلة للتعديل بسهولة)
+   - بنستخدم CSS variables عشان تغيّر الستايل بسرعة من مكان واحد
+   ------------------------------------------------------------------- */
+:root {
+  /* ألوان نص وخلفيات مريحة للعين (Light mode) */
+  --rc-text: #111827;         /* لون النص الأساسي */
+  --rc-muted: #4b5563;        /* نص ثانوي */
+  --rc-bg-soft: #f8fafc;      /* خلفية خفيفة للـ callouts */
+  --rc-border: #e5e7eb;       /* حدود خفيفة */
+  --rc-link: #2563eb;         /* لون الروابط */
+  --rc-link-hover: #1d4ed8;
+
+  /* ألوان للتنبيه/معلومة/تحذير */
+  --rc-info: #0284c7;
+  --rc-warn: #d97706;
+  --rc-danger: #dc2626;
+  --rc-success: #16a34a;
+
+  /* مسافات/انحناءات */
+  --rc-radius: 10px;
+  --rc-line: 1.9;             /* line-height للقراءة */
+  --rc-max-width: 78ch;       /* عرض عمود القراءة */
+}
+
+/* -------------------------------------------------------------------
+   2) نطاق التطبيق داخل المقالات فقط
+   - Chirpy بيحط محتوى البوست داخل .post-content غالبًا
+   - لو لقيت اسم مختلف عندك، بدّل الـ selector حسب الهيكل
+   ------------------------------------------------------------------- */
+.post-content,
+.content,
+article {
+  color: var(--rc-text);
+}
+
+/* -------------------------------------------------------------------
+   3) تحسين المقروئية: عرض العمود + تباعد + حجم خط
+   ------------------------------------------------------------------- */
+.post-content {
+  max-width: var(--rc-max-width);
+  margin-inline: auto;
+  line-height: var(--rc-line);
+  font-size: 1.02rem; /* زيادة بسيطة بدون ما تكسر تصميم الثيم */
+}
+
+/* فقرات مريحة */
+.post-content p {
+  margin: 0.85em 0;
+  color: var(--rc-text);
+}
+
+/* نص ثانوي (مثال: اقتباسات، وصف) */
+.post-content .text-muted,
+.post-content small {
+  color: var(--rc-muted);
+}
+
+/* -------------------------------------------------------------------
+   4) عناوين واضحة + مسافات منظمة
+   ------------------------------------------------------------------- */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  line-height: 1.25;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+/* إبراز h2 بشكل بسيط */
+.post-content h2 {
+  border-inline-start: 4px solid var(--rc-link);
+  padding-inline-start: 10px;
+}
+
+/* -------------------------------------------------------------------
+   5) روابط مريحة + underline واضح عند المرور
+   ------------------------------------------------------------------- */
+.post-content a {
+  color: var(--rc-link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.post-content a:hover {
+  color: var(--rc-link-hover);
+  border-bottom-color: var(--rc-link-hover);
+}
+
+/* -------------------------------------------------------------------
+   6) التعامل مع العربي/الإنجليزي داخل نفس السطر (حل اللغبطة)
+   - استخدم <span class="en">Reverse Engineering</span>
+   - استخدم <span class="tech">ARM64</span> للمصطلحات
+   ------------------------------------------------------------------- */
+.post-content .en {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+  font-weight: 500;
+  color: var(--rc-success);
+}
+
+.post-content .tech {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+  font-weight: 600;
+  color: var(--rc-warn);
+}
+
+/* لو عايز تمييز أقوى للمصطلحات */
+.post-content code,
+.post-content kbd {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* -------------------------------------------------------------------
+   7) كود بلوك مريح (للـ Reverse Engineering مهم جدًا)
+   ------------------------------------------------------------------- */
+.post-content pre {
+  border: 1px solid var(--rc-border);
+  border-radius: var(--rc-radius);
+  padding: 14px 16px;
+  overflow: auto;
+  margin: 1.2em 0;
+}
+
+/* كود inline */
+.post-content :not(pre) > code {
+  border: 1px solid var(--rc-border);
+  border-radius: 8px;
+  padding: 0.12em 0.35em;
+  font-size: 0.95em;
+}
+
+/* -------------------------------------------------------------------
+   8) بلوكات تنبيه (Info / Warning / Danger / Success)
+   - تقدر تستخدمها في الماركداون كـ HTML بسيط:
+     <div class="callout info">...</div>
+   ------------------------------------------------------------------- */
+.post-content .callout {
+  background: var(--rc-bg-soft);
+  border: 1px solid var(--rc-border);
+  border-radius: var(--rc-radius);
+  padding: 12px 14px;
+  margin: 1.1em 0;
+}
+
+.post-content .callout.info {
+  border-inline-start: 5px solid var(--rc-info);
+}
+
+.post-content .callout.warn {
+  border-inline-start: 5px solid var(--rc-warn);
+}
+
+.post-content .callout.danger {
+  border-inline-start: 5px solid var(--rc-danger);
+}
+
+.post-content .callout.success {
+  border-inline-start: 5px solid var(--rc-success);
+}
+
+/* عنوان صغير داخل الكال آوت */
+.post-content .callout .title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* -------------------------------------------------------------------
+   9) اقتباسات: شكل أنيق بدون زحمة
+   ------------------------------------------------------------------- */
+.post-content blockquote {
+  border-inline-start: 4px solid var(--rc-border);
+  padding-inline-start: 12px;
+  margin: 1.2em 0;
+  color: var(--rc-muted);
+}
+
+/* -------------------------------------------------------------------
+   10) الصور: تخليها مريحة ومش “تقطع” القراءة
+   ------------------------------------------------------------------- */
+.post-content img {
+  border-radius: var(--rc-radius);
+  border: 1px solid var(--rc-border);
+}
+
+/* تعليق/كابتشن لو بتستخدم <figcaption> */
+.post-content figcaption {
+  color: var(--rc-muted);
+  font-size: 0.95em;
+  margin-top: 0.4em;
+}
+
+/* -------------------------------------------------------------------
+   11) جداول: شكل أوضح وقراءة أسهل
+   ------------------------------------------------------------------- */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  overflow: hidden;
+  border-radius: var(--rc-radius);
+  border: 1px solid var(--rc-border);
+}
+
+.post-content th,
+.post-content td {
+  border-bottom: 1px solid var(--rc-border);
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
+.post-content th {
+  background: var(--rc-bg-soft);
+  font-weight: 700;
+}
+
+/* -------------------------------------------------------------------
+   12) دعم RTL بشكل أفضل (خصوصًا لو المقال عربي)
+   - لو الصفحة كلها RTL: اكتب dir="rtl" على الـ html أو body أو container
+   - هنا بنظبط تفاصيل صغيرة
+   ------------------------------------------------------------------- */
+[dir="rtl"] .post-content {
+  text-align: start; /* يحترم RTL و LTR */
+}
+
+/* منع لخبطة علامات الترقيم حوالين مصطلحات انجليزي */
+[dir="rtl"] .post-content .en,
+[dir="rtl"] .post-content .tech,
+[dir="rtl"] .post-content code {
+  unicode-bidi: isolate;
+}
+
+/* -------------------------------------------------------------------
+   13) (اختياري) تحسين الوضع الداكن لو الثيم عندك بيدعمه بـ data-mode
+   - Chirpy غالبًا بيبدّل وضع الألوان بالـ attributes / classes
+   - هنا بنحط بديل آمن، لو عندك selector مختلف عدّله
+   ------------------------------------------------------------------- */
+html[data-mode="dark"] {
+  --rc-text: #e5e7eb;
+  --rc-muted: #9ca3af;
+  --rc-bg-soft: #0b1220;
+  --rc-border: #1f2937;
+  --rc-link: #60a5fa;
+  --rc-link-hover: #93c5fd;
+}
