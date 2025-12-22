@@ -7,96 +7,73 @@ image: /assets/img/posts/ch1/optimized.jpeg
 ---
 
 ### Source code can be compiled by different compilers with various optimization levels.
-### General idea
-<p dir="rtl">نفس كود الC</p>
-<p dir="rtl">ممكن يطلع Assembly مختلف</p>
-<p dir="rtl">حسب:</p>
-<p dir="rtl">1. نوع الcompiler</p>
-<p dir="rtl">2. مستوي الoptimization</p>
-<p dir="rtl">3. هل فيه debug info ولا لا</p>
 
-### What does the optimizayion mean ?
-<p dir="rtl">الـcompiler مش بس يترجم دا كمان</p>
-<p dir="rtl">-ممكن يعدل الكود</p>
-<p dir="rtl">-يشيل حاجات</p>
-<p dir="rtl">-يغير الترتيب</p>
-<p dir="rtl">(علشان:</p>
-<p dir="rtl">-يخليه أسرع</p>
-<p dir="rtl">-أو أقل حجما</p>
-		
+### General idea
+
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(148,163,184,.18); background:rgba(148,163,184,.05); line-height:1.9; color:#E5E7EB;">
+نفس كود الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">C</span>
+ممكن يطلع <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">Assembly</span> مختلف حسب:<br>
+1) نوع الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">compiler</span><br>
+2) مستوى الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">optimization</span><br>
+3) هل فيه <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">debug info</span> ولا لا
+</div>
+
+### What does the optimization mean ?
+
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(148,163,184,.18); background:rgba(148,163,184,.05); line-height:1.9; color:#E5E7EB;">
+الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">compiler</span>
+مش بس بيترجم، ده كمان ممكن:<br>
+- يعدل الكود<br>
+- يشيل حاجات<br>
+- يغير الترتيب<br><br>
+علشان:<br>
+- يخليه أسرع<br>
+- أو أقل حجمًا
+</div>
+
 ### optimization level
 
-<p dir="rtl">غالبا فيه 3 مستويات مشهورة</p>
-<p dir="rtl">المستوي الأول optimization = 0</p>
-<p dir="rtl">مفيش تعديل علي الكود</p>
-<p dir="rtl">(الكود طويل وواضح وسهل الفهم)</p>
-<p dir="rtl">(كل سطر C تقريبا ليه Assembly مقابل )</p>
-<p dir="rtl">والنوع دا اللي بيكون مفيد في:</p>
-<p dir="rtl">* التعليم والـDebugging والـReverse *</p>
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(245,158,11,.22); background:rgba(245,158,11,.08); line-height:1.9; color:#E5E7EB;">
+<b style="color:#FBBF24;">Optimization = 0</b><br>
+غالبًا فيه 3 مستويات مشهورة، وأولهم ده.<br>
+مفيش تعديل على الكود، فبيكون:<br>
+- طويل وواضح وسهل الفهم<br>
+- كل سطر <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">C</span>
+تقريبًا ليه <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">Assembly</span> مقابل<br><br>
+وده مفيد جدًا في:<br>
+<b>التعليم – Debugging – Reverse</b>
+</div>
 
-### Other types of Optimization: (01/ 02/ 03 )
-<p dir="rtl">الـCompiler بيحاول:</p>
-<p dir="rtl">-يسرع البرنامج</p>
-<p dir="rtl">-يشيل أي كود ملوش لازمة</p>
-<p dir="rtl">النتيجة:</p>
-<p dir="rtl">-كودAssembly أقصر</p>
-<p dir="rtl">-بس أصعب في الفهم</p>
-<p dir="rtl">-سطور C ممكن تختفي تماما</p>
-	
+### Other types of Optimization (O1 / O2 / O3)
+
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(148,163,184,.18); background:rgba(148,163,184,.05); line-height:1.9; color:#E5E7EB;">
+الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">Compiler</span>
+بيحاول:<br>
+- يسرع البرنامج<br>
+- يشيل أي كود ملوش لازمة<br><br>
+<b>النتيجة:</b><br>
+- كود <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">Assembly</span> أقصر<br>
+- بس أصعب في الفهم<br>
+- سطور <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">C</span> ممكن تختفي تمامًا
+</div>
+
 ### Example C Code
+
 ```c
 int x = 5;
 ```
-<p dir="rtl">لو X مش مستخدم هيتحذف بالكامل من النسخة الoptimized</p>
-### Compiler speed
-<p dir="rtl">1.بدون optimization:</p>
-<p dir="rtl">-الترجمة أسرع</p>
-<p dir="rtl">2.مع optimization:</p>
-<p dir="rtl">-الترجمة أبطأ</p>
-<p dir="rtl">-بس البرنامج النهائي أسرع</p>
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(148,163,184,.18); background:rgba(148,163,184,.05); line-height:1.9; color:#E5E7EB;"> لو <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">x</span> مش مستخدم، هيتحذف بالكامل من النسخة الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">optimized</span>. </div>
+Compiler speed
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(96,165,250,.22); background:rgba(96,165,250,.07); line-height:1.9; color:#E5E7EB;"> 1) بدون <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">optimization</span>: الترجمة أسرع<br> 2) مع <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">optimization</span>: الترجمة أبطأ<br> بس البرنامج النهائي أسرع </div>
+Optimization for speed or size?
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(148,163,184,.18); background:rgba(148,163,184,.05); line-height:1.9; color:#E5E7EB;"> الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">compiler</span> ممكن يركز على:<br> 🔸 سرعة التنفيذ (<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">performance</span>)<br> 🔸 صغر حجم الملف </div>
+What does the Debug Code mean?
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(34,197,94,.18); background:rgba(34,197,94,.07); line-height:1.9; color:#E5E7EB;"> لو فعلت <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">debug mode</span>، الملف الناتج هيبقى فيه:<br> - معلومات عن المتغيرات<br> - أسماء الدوال<br> - أرقام السطور<br><br> وفيه ربط مباشر:<br> سطر <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">C</span> ↔ عنوان في الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">Assembly</span><br><br> وده بيخلي:<br> - الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">debugging</span> سهل<br> - والـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">reversing</span> أسهل </div>
+In the Optimized version
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(245,158,11,.22); background:rgba(245,158,11,.08); line-height:1.9; color:#E5E7EB;"> في النسخة الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">optimized</span>:<br> - مفيش ربط واضح بين كود الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">C</span> والـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">Assembly</span><br> - سطور الـ<span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">C</span> ممكن تندمج أو تختفي<br> - ترتيب الكود بيتغير<br><br> وده الطبيعي في البرامج الحقيقية </div>
+ليه دا مهم في الـReverse Engineering
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(148,163,184,.18); background:rgba(148,163,184,.05); line-height:1.9; color:#E5E7EB;"> مش كل البرامج متترجمة بنفس الطريقة.<br> ممكن تقابل:<br> - حاجة سهلة زي <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">debug build</span><br> - حاجة صعبة زي <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">release build</span><br><br> علشان كده لازم تتعود على الاتنين. </div>
+وصلنا للخلاصة
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(96,165,250,.22); background:rgba(96,165,250,.07); line-height:1.9; color:#E5E7EB;"> في الكتاب بنستخدم <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">compilers</span> قديمة علشان:<br> - تطلع <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">asm code</span> أبسط<br> - تقلل التشويش<br> - وتسهّل الشرح<br><br> وبكده يبقى فاضل شوية نظري وندخل على العملي. </div>
 
-
-### Optimization for speed or size?
-<p dir="rtl">الـ compiler ممكن يشتغل على:</p>
-
-<p dir="rtl">🔸 سرعة التنفيذ (performance)</p>
-<p dir="rtl">🔸 صغر حجم الملف</p>
-
-### What does the Debug Code mean?
-<p dir="rtl">لو فعلت debug mode:</p>
-<p dir="rtl">الملف الناتج يحتوي:</p>
-
-<p dir="rtl">معلومات عن المتغيرات</p>
-<p dir="rtl">أسماء الدوال</p>
-<p dir="rtl">أرقام السطور</p>
-<p dir="rtl">فيه ربط مباشر:</p>
-<p dir="rtl">سطر C رقم 10 ↔ عنوان في الـ Assembly</p>
-<p dir="rtl">ده بيخلي:</p>
-<p dir="rtl">الـ debugging سهل</p>
-<p dir="rtl">الـ reversing أسهل كمان</p>
-
-### In the Optimized version
-<p dir="rtl">مش هتلاقي ربط واضح بين كود الـC والـAssembly</p>
-<p dir="rtl">سطور الـC ممكن تندمج تختفي</p>
-<p dir="rtl">ترتيب الكود بيتغير</p>
-<p dir="rtl">عامة دا اللي هنقابله في البرامج الحقيقية</p>
-
-### ليه دا مهم في الـReverse Engineering 
-<p dir="rtl">-مش كل البرامج متترجمة بنفس الطريقة</p>
-<p dir="rtl">-ممكن تقابل:</p>
-<p dir="rtl">حاجة سهلة زي debug build</p>
-<p dir="rtl">حاجة صعبة زي Release build</p>
-<p dir="rtl">فلازم تتعود علي الإتنين</p>
-
-### وصلنا للخلاصة 
-<p dir="rtl">في الكتاب هنا بنستخدم compilers قديمة</p>
-<p dir="rtl">علشان:</p>
-<p dir="rtl">تطلع asm code أقصر أو أبسط</p>
-<p dir="rtl">وهتسهل علينا الشرح وهتقلل التشويش</p>
-	
-<p dir="rtl">وبكدة يكون فاضل شوية حاجات بسيطة نظري وندخل للعملي</p>
-
-
-![Gald](/assets/img/posts/ch1/gald.jpeg)
-
-<p dir="rtl">كل جديد هينزل علي Discord</p>
+<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px; border:1px solid rgba(148,163,184,.18); background:rgba(148,163,184,.05); line-height:1.9; color:#E5E7EB;"> كل جديد هينزل على Discord </div> ```
