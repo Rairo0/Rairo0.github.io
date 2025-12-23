@@ -4,8 +4,9 @@ permalink: /
 title: ""
 ---
 
-
-<h1>أهلا 👋</h1>
+<div dir="rtl">
+<h1>إيه الأخبار عاملين ايه </h1>
+</div>
 
 <div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px;
 border:1px solid rgba(148,163,184,.18); background:rgba(148,163,184,.05);
