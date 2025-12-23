@@ -5,7 +5,7 @@ title: ""
 ---
 
 <div dir="rtl">
-<h1>إيه الأخبار عاملين ايه </h1>
+<h1>إيه الأخبار عاملين ايه</h1>
 </div>
 
 <div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px;
