@@ -77,25 +77,31 @@ line-height:1.9; color:#E5E7EB;">
 <h2>ابدأ منين؟</h2>
 </div>
 
-<div dir="rtl" style="padding:12px 14px; margin:12px 0; border-radius:10px;
+<div style="padding:12px 14px; margin:12px 0; border-radius:10px;
 border:1px solid rgba(245,158,11,.22); background:rgba(245,158,11,.08);
 line-height:1.9; color:#E5E7EB;">
 <ul style="margin:0; padding-right:18px;">
   <li>
+    <div dir="rtl">
     🔹 <b>ابدأ من الـ Introduction</b><br>
+    </div>
     أول خطوة في الكتاب وشرح المفاهيم الأساسية<br>
     👉 <a href="./posts/Introduction_00/" style="direction:ltr; unicode-bidi:isolate; color:#60A5FA; text-decoration:none; border-bottom:1px solid rgba(96,165,250,.35);">
       RE4B: Introduction
     </a>
   </li>
   <li style="margin-top:10px;">
+    <div dir="rtl">
     🔹 <b>تصفح كل الشابترات</b><br>
+    </div>
     👉 <a href="./archives/" style="direction:ltr; unicode-bidi:isolate; color:#60A5FA; text-decoration:none; border-bottom:1px solid rgba(96,165,250,.35);">
       Archives
     </a>
   </li>
   <li style="margin-top:10px;">
+    <div dir="rtl">
     🔹 <b>التصنيفات</b><br>
+    </div>
     👉 <a href="./categories/" style="direction:ltr; unicode-bidi:isolate; color:#60A5FA; text-decoration:none; border-bottom:1px solid rgba(96,165,250,.35);">
       Categories
     </a>
