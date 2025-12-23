@@ -84,8 +84,8 @@ line-height:1.9; color:#E5E7EB;">
   <li>
     🔹 <b>ابدأ من الـ Introduction</b><br>
     أول خطوة في الكتاب وشرح المفاهيم الأساسية<br>
-    👉 <a href="./archives/" style="direction:ltr; unicode-bidi:isolate; color:#60A5FA; text-decoration:none; border-bottom:1px solid rgba(96,165,250,.35);">
-      RE4B: Chapter 1
+    👉 <a href="./posts/Introduction_00/" style="direction:ltr; unicode-bidi:isolate; color:#60A5FA; text-decoration:none; border-bottom:1px solid rgba(96,165,250,.35);">
+      RE4B: Introduction
     </a>
   </li>
   <li style="margin-top:10px;">
@@ -148,6 +148,9 @@ line-height:1.9; color:#E5E7EB;">
   </li>
   <li style="margin-top:10px;">
     Discord: 
+    <a href="https://discord.gg/2yRqHWqP" style="direction:ltr; unicode-bidi:isolate; color:#60A5FA; text-decoration:none; border-bottom:1px solid rgba(96,165,250,.35);">
+      https://discord.gg/2yRqHWqP
+    </a>
   </li>
 </ul>
 </div>
