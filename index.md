@@ -30,8 +30,7 @@ line-height:1.9; color:#E5E7EB;">
 الفكرة بسيطة:
 <ul style="margin:10px 0 0; padding-right:18px;">
   <li>تلخيص وشرح كتاب <b>Reverse Engineering for Beginners</b></li>
-  <li>الشرح على شكل <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">Notes</span> بالعربي</li>
-  <li>بدون تعقيد أو تنظير زيادة</li>
+  <li>الشرح على شكل <span style="direction:ltr; unicode-bidi:isolate; font-weight:600;">Notes </span>بالعربي بدون تعقيد</li>
 </ul>
 <br>
 ودي مجرد البداية، وممكن يبقى فيه أفكار ومحتوى أكتر قدام.
