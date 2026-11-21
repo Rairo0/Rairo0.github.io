@@ -1,9 +1,9 @@
 ---
 title: "CCNA: Session 1 — Network Basics & Components"
-date: 2026-11-21
-categories: [Networking, CCNA]
-tags: [CCNA, Networking, Hub, Switch, Router]
-image: /assets/img/posts/ccna/cover.jpeg
+date: 2025-10-01
+categories: [CCNA]
+tags: [CCNA]
+
 ---
 
 <style>
