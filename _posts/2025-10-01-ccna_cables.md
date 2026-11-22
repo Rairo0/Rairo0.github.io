@@ -1,5 +1,5 @@
 ---
-title: "CCNA Cables Type"
+title: "CCNA Cables Types"
 date: 2025-10-01
 categories: [CCNA]
 tags: [CCNA]
@@ -7,7 +7,7 @@ tags: [CCNA]
 
 <style>
 .ccna{direction:rtl;text-align:right;line-height:1.95;font-size:1.02em}
-.ccna \*{box-sizing:border-box}
+.ccna *{box-sizing:border-box}
 .ccna .sec{margin:42px 0 14px;padding:10px 18px;border-radius:12px;border-right:6px solid rgb(96,165,250);background:linear-gradient(270deg,rgba(96,165,250,.22),rgba(96,165,250,0));font-weight:800}
 .ccna h3.s3{margin:30px 0 10px;padding:4px 14px 4px 0;font-size:1.25em;font-weight:800;border-right:4px solid rgb(168,85,247);padding-right:14px}
 .ccna .box{--c:148,163,184;padding:14px 20px;margin:16px 0;border-radius:12px;border:1px solid rgba(var(--c),.3);border-right:5px solid rgb(var(--c));background:rgba(var(--c),.08)}
@@ -28,7 +28,7 @@ tags: [CCNA]
 .ccna .step>div:last-child{flex:1}
 .ccna .num{flex:0 0 34px;height:34px;line-height:34px;text-align:center;border-radius:50%;font-weight:800;color:#fff;background:rgb(var(--c))}
 .ccna .sub{margin:8px 0;padding:8px 14px;border-radius:10px;border:1px dashed rgba(var(--c),.55);background:rgba(var(--c),.07)}
-
+</style>
 <div class="ccna" dir="rtl">
 <h2 class="sec"><span class="t">Coaxial Cable</span>:</h2>
 <div class="box blue">
