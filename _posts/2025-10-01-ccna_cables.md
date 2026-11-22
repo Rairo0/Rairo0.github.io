@@ -1,6 +1,5 @@
 ---
-
-title: "CCNA: Network Cables"
+title: "CCNA Cables Type"
 date: 2025-10-01
 categories: [CCNA]
 tags: [CCNA]
