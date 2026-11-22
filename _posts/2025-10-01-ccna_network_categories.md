@@ -1,5 +1,5 @@
 ---
-title: "CCNA: Network Categories & Message Types"
+title: "003-CCNA: Network Categories & Message Types"
 date: 2025-10-01
 categories: [CCNA]
 tags: [CCNA]
