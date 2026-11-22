@@ -2,8 +2,8 @@
 
 title: "CCNA: Network Cables"
 date: 2025-10-01
-categories: \[CCNA]
-tags: \[CCNA]
+categories: [CCNA]
+tags: [CCNA]
 ---
 
 <style>
