@@ -1,5 +1,5 @@
 ---
-title: "CCNA: OSI Model"
+title: "005-CCNA: OSI Model"
 date: 2025-10-01
 categories: [CCNA]
 tags: [CCNA]
