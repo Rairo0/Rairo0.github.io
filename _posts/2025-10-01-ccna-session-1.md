@@ -1,5 +1,5 @@
 ---
-title: "CCNA: Session 1 — Network Basics & Components"
+title: "001-CCNA: Network Basics & Components"
 date: 2025-10-01
 categories: [CCNA]
 tags: [CCNA]
