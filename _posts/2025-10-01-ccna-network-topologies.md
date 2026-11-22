@@ -8,7 +8,7 @@ tags: [CCNA]
 
 <style>
 .ccna{direction:rtl;text-align:right;line-height:1.95;font-size:1.02em}
-.ccna \*{box-sizing:border-box}
+.ccna *{box-sizing:border-box}
 .ccna .sec{margin:42px 0 14px;padding:10px 18px;border-radius:12px;border-right:6px solid rgb(96,165,250);background:linear-gradient(270deg,rgba(96,165,250,.22),rgba(96,165,250,0));font-weight:800}
 .ccna .box{--c:148,163,184;padding:14px 20px;margin:16px 0;border-radius:12px;border:1px solid rgba(var(--c),.3);border-right:5px solid rgb(var(--c));background:rgba(var(--c),.08)}
 .ccna .blue{--c:96,165,250}
@@ -25,7 +25,7 @@ tags: [CCNA]
 .ccna .grid .box{margin:0}
 .ccna .t{direction:ltr;unicode-bidi:isolate;display:inline-block;padding:0 8px;margin:0 2px;border-radius:6px;font-family:ui-monospace,Consolas,monospace;font-size:.9em;background:rgba(148,163,184,.18);border:1px solid rgba(148,163,184,.28)}
 .ccna .line{direction:ltr;text-align:left;unicode-bidi:isolate;padding:10px 16px;margin:8px 0;border-radius:10px;border:1px solid rgba(var(--c),.4);border-left:5px solid rgb(var(--c));background:rgba(var(--c),.08);font-family:ui-monospace,Consolas,monospace;font-weight:700}
-
+</style>
 <div class="ccna" dir="rtl">
 <h2 class="sec"><span class="t">Network Topologies</span></h2>
 <div class="box blue">
