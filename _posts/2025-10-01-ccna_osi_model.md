@@ -1,9 +1,8 @@
 ---
 title: "CCNA: OSI Model"
-date: 2026-11-22
-categories: [Networking, CCNA]
-tags: [CCNA, Networking, OSI, Layers, Encapsulation]
-image: /assets/img/posts/ccna/osi.jpeg
+date: 2025-10-01
+categories: [CCNA]
+tags: [CCNA]
 ---
 
 <style>
