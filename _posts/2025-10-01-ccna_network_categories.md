@@ -1,9 +1,8 @@
 ---
 title: "CCNA: Network Categories & Message Types"
-date: 2026-11-22
-categories: [Networking, CCNA]
-tags: [CCNA, Networking, Simplex, Duplex, Unicast, Multicast, Broadcast]
-image: /assets/img/posts/ccna/categories.jpeg
+date: 2025-10-01
+categories: [CCNA]
+tags: [CCNA]
 ---
 
 <style>
