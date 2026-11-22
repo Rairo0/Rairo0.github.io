@@ -50,5 +50,4 @@ order: 1
 <div class="card"><div class="idx">05</div><h3>HTB CPTS</h3><p>Preparation notes and labs for the Certified Penetration Testing Specialist path.</p></div>
 </div>
 <div class="label">Connect</div>
-<div class="meta"><a href="https://github.com/rairo0">GitHub</a><a href="https://www.linkedin.com/in/mohammad-ehab-55aa38329/">LinkedIn</a><a href="https://profile.hackthebox.com/profile/019e31de-80ca-72f3-b6ea-3643379be469?utm_medium=copy_url">Hack The Box</a></div>
-</div>
+<div class="meta"><a href="#">GitHub</a><a href="#">LinkedIn</a><a href="#">Hack The Box</a></div></div>
