@@ -1,6 +1,6 @@
 ---
 
-title: "CCNA: Network Topologies"
+title: "002-CCNA: Network Topologies"
 date: 2025-10-01
 categories: [CCNA]
 tags: [CCNA]
