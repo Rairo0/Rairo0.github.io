@@ -1,5 +1,4 @@
 ---
-
 title: "003-CCNA: Network Topologies"
 date: 2025-10-01
 categories: [CCNA]
